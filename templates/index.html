@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Lista de Tareas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Mi Lista de Tareas</h1>
+
+  <form action="/agregar" method="POST">
+    <input type="text" name="contenido" placeholder="Escribe tu tarea" required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <ul>
+    {% for tarea in tasks %}
+      <li>{{ tarea.contenido }}</li>
+    {% else %}
+      <li>No hay tareas aún.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
