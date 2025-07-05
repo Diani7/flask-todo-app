@@ -1,6 +1,6 @@
 # Aplicación ToDo Flask 
 
-Aplicación web de lista de tareas construida con **Flask**, **SQLite** y **SQLAlchemy**. Permite agregar y visualizar tareas en una interfaz sencilla.
+Aplicación web simple para gestionar tareas, construida con **Flask**, **SQLite** y **SQLAlchemy**. Permite agregar,completar, eliminar y visualizar tareas en una interfaz sencilla.
 
 ---
 
@@ -19,3 +19,7 @@ Aplicación web de lista de tareas construida con **Flask**, **SQLite** y **SQLA
    ```bash
    git clone https://github.com/Diani7/flask-todo-app.git
    cd flask-todo-app
+
+# Autora
+Diana Cifuentes
+Desarrolladora apasionada por la tecnología y el aprendizaje constante.
