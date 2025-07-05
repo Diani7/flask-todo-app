@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, url_for
 from .models import Tarea
 from . import db
 
@@ -16,3 +16,17 @@ def agregar():
     db.session.add(nueva)
     db.session.commit()
     return redirect('/')
+
+@main.route('/completar/<int:tarea_id>', methods=['POST'])
+def completar(tarea_id):
+    tarea = Tarea.query.get_or_404(tarea_id)
+    tarea.completada = not tarea.completada  # Cambia su estado
+    db.session.commit()
+    return redirect(url_for('main.index'))
+
+@main.route('/eliminar/<int:tarea_id>', methods=['POST'])
+def eliminar(tarea_id):
+    tarea = Tarea.query.get_or_404(tarea_id)
+    db.session.delete(tarea)
+    db.session.commit()
+    return redirect(url_for('main.index'))

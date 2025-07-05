@@ -46,3 +46,8 @@ li {
   border-left: 5px solid #1c6dd0;
   border-radius: 4px;
 }
+
+.completada {
+  text-decoration: line-through;
+  color: gray;
+}

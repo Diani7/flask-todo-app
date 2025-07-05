@@ -4,7 +4,7 @@ Aplicación web de lista de tareas construida con **Flask**, **SQLite** y **SQLA
 
 ---
 
-## 🚀 Tecnologías
+## Tecnologías
 
 - Python 3.12
 - Flask
@@ -13,7 +13,7 @@ Aplicación web de lista de tareas construida con **Flask**, **SQLite** y **SQLA
 
 ---
 
-## ⚙️ Instalación y uso
+## Instalación y uso
 
 1. Clona el repositorio:
    ```bash

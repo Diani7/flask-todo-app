@@ -15,10 +15,21 @@
 
   <ul>
     {% for tarea in tasks %}
-      <li>{{ tarea.contenido }}</li>
-    {% else %}
-      <li>No hay tareas aún.</li>
-    {% endfor %}
+  <li>
+    <form action="{{ url_for('main.completar', tarea_id=tarea.id) }}" method="POST" style="display:inline;">
+      <input type="checkbox" name="completada" onchange="this.form.submit()" {% if tarea.completada %}checked{% endif %}>
+    </form>
+    <span class="{% if tarea.completada %}completada{% endif %}">
+      {{ tarea.contenido }}
+    </span>
+    <form action="{{ url_for('main.eliminar', tarea_id=tarea.id) }}" method="POST" style="display:inline;">
+      <button type="submit">Eliminar</button>
+    </form>
+  </li>
+{% else %}
+  <li>No hay tareas aún.</li>
+{% endfor %}
+
   </ul>
 </body>
 </html>
