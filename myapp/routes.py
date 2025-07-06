@@ -15,12 +15,12 @@ def agregar():
     nueva = Tarea(contenido=contenido)
     db.session.add(nueva)
     db.session.commit()
-    return redirect('/')
+    return redirect(url_for('main.index'))
 
 @main.route('/completar/<int:tarea_id>', methods=['POST'])
 def completar(tarea_id):
     tarea = Tarea.query.get_or_404(tarea_id)
-    tarea.completada = not tarea.completada  # Cambia su estado
+    tarea.completada = not tarea.completada
     db.session.commit()
     return redirect(url_for('main.index'))
 

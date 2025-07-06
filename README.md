@@ -20,6 +20,11 @@ Aplicación web simple para gestionar tareas, construida con **Flask**, **SQLite
    git clone https://github.com/Diani7/flask-todo-app.git
    cd flask-todo-app
 
+## 🖼️ Vista previa
+
+![Vista previa de la aplicación](imgTareas.png)
+
+
 # Autora
 Diana Cifuentes
 Desarrolladora apasionada por la tecnología y el aprendizaje constante.

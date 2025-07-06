@@ -1,4 +1,3 @@
-# myapp/models.py
 from . import db
 
 class Tarea(db.Model):
